@@ -29,26 +29,15 @@ console.log(`Task 1: nestedFunction can access internal variable because that th
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
 function summation(number) {
-  const array = [];
-  const len = Math.ceil(Math.log10(number + 1));
-  // for (let i = 0; i < len; i++){
-  //   array.push[i];
-  // }
-  return len;
-  // const num1 = (number - 3);
-  // const num2 = (number - 2);
-  // const num3 = (number - 1);
-  // const array = [num1, num2, num3, number];
-  // return num1 + num2 + num3 + number;
-
-  // var count = 0;
-  // for (let i = 0; i < number.length; i++){
-  //   return count = count + number[1];
-  // return number.length;  
+  var total = 0;
+  for(var i = 1; i <= number; i++){
+    total += i;
+  }
+  return total;
 }
   
  
-  console.log('Task 2:', summation(1222220));
+  console.log('Task 2:', summation(10));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
