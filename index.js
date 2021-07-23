@@ -29,11 +29,15 @@ console.log(`Task 1: nestedFunction can access internal variable because that th
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
 function summation(number) {
-  return number + (number - 1) + (number - 2) + (number - 3);
-
-  }
+  // return number + (number - 1) + (number - 2) + (number - 3);
+  // var count = 0;
+  // for (let i = 0; i < number.length; i++){
+  //   return count = count + number[1];
+  // return number.length;  
+}
+  
  
-  console.log('Task 2.:', summation(4));
+  // console.log('Task 2:', summation(4));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -57,10 +61,13 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+  function animalNames(){
+    const newArray = [];
+    zooAnimals.forEach(item => newArray.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`));
+    return newArray;
+  };
   
+console.log('Request 1:', animalNames());
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -68,20 +75,24 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(){
+    const newNames = zooAnimals.map(item => item.animal_name.toLowerCase());
+    return newNames;
   }
   
+  console.log('Request 2:', lowerCaseNames());
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(){
+    const lowPop = zooAnimals.filter(item => item.population < 5);
+    return lowPop;
   }
   
+  console.log('Request 3:', lowPopulationAnimals());
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
