@@ -2,11 +2,11 @@
 /* 🚀🚀🚀🤓 Task 1: 🤓🚀🚀🚀 
 Study the code below and explain in your own words why nested function can access the variable internal. */
 
-const external = "I'm outside the function";
+const external = "T1. I'm outside the function";
 
 function myFunction() {
   console.log(external);
-  const internal = "Hello! I'm inside myFunction!";
+  const internal = "T1. Hello! I'm inside myFunction!";
 
   function nestedFunction() {
     console.log(internal);
@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+console.log(`Task 1: nestedFunction can access internal variable because that the closure for the nested function. By reaching outside of internal function to grab the value.`)
 
 
 
@@ -28,11 +28,12 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
+function summation(number) {
+  return number + (number - 1) + (number - 2) + (number - 3);
 
   }
  
+  console.log('Task 2.:', summation(4));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
